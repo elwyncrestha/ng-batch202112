@@ -1,27 +1,128 @@
 # NgBatch202112
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+## Prerequisites
 
-## Development server
+* Language
+  * HTML
+  * JavaScript
+  * TypeScript
+* Tools & Environments
+  * NodeJS Runtime Environment
+  * Angular CLI
+* IDE / Editors
+  * VS Code
+  * IntelliJ IDEA
+  * Webstorm
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Commands
 
-## Code scaffolding
+* Installing Angular CLI Globally
+  * `npm i -g @angular/cli`
+* Generating an Angular application
+  * `ng new ng-batch202112`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## GIT
 
-## Build
+* Unstaged / untracked files
+* Staged / tracked files
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Day 1
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Package Manager
+  * NPM (Node Package Manager) - package-lock.json
+  * YARN - yarn.lock
 
-## Running end-to-end tests
+* [What is Angular?](https://angular.io/guide/what-is-angular)
+* Angular applications: The essentials
+  * Components
+  * Templates
+  * Dependency Injection
+* Angular CLI
+* First-party libraries
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Angular - What is Angular?
 
-## Further help
+* Brief start
+  * Components
+    * Component class (*.ts)
+    * Component template (*.html)
+    * Component specific styles (*.css)
+    * Component test class (*.spec.ts)
+  * Services
+  * Module and Routing Module
+  * Decorator
+    * @NgModule
+    * @Component
+    * @Directive
+    * @Injectable
+* Semantic versioning (semver) examples
+  * `~8.2.14`
+  * `^1.10.0`
+* Angular Template Syntax
+  * `*ngFor`
+  * `*ngIf`
+  * `*ngSwitchCase`
+* Template Interpolation {{}}
+* Property Binding [prop]
+* Event Binding (event)
+  
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Day 2
+
+---
+
+## Day 3
+
+* Adding 3rd party dependency
+* Angular Module
+* Angular Routing Module
+* Nesting Components
+  * Parent-child communication using @Input decorator
+
+---
+
+## Day 4
+
+* Redirecting routes
+* Lazy-loaded modules
+* Nesting components
+  * Child-parent communication using @Output decorator
+* Angular Service and Dependency Injection
+
+---
+
+## Day 5 | 6
+
+* HttpClientModule
+* Observable
+* Pipes (Async pipes)
+
+---
+
+## Day 7
+
+* Subject, Behavioral Subject, Observable and Subscription
+
+## Day 8
+
+* Template-driven form: FormsModule
+* Reactive form: ReactiveFormsModule
+  * AbstractControl
+  * FormGroup
+  * FormControl
+  * FormArray
+  * FormBuilder
+
+## Day 9
+
+* Ng-container
+* Ng-template
+* Ng-content
+* State Management with NgRx Intro
+
+## Day 10
+
+* NgRx application
