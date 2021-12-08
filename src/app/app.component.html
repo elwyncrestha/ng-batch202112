@@ -1,4 +1,10 @@
 <app-header></app-header>
+<h1>Count: {{ incrementingNumber }}</h1>
+<h1 *ngFor="let a of [1, 2, 3, 4, 5]; let i = index">
+  Index: {{ i }} {{ incrementingNumber % 2 == 0 ? "Even" : "Odd" }}
+  Count: <span [innerText]="incrementingNumber"></span>
+</h1>
+<button (click)="resetCounter()">Click me!</button>
 <div class="footer p-3">
   <app-footer></app-footer>
 </div>

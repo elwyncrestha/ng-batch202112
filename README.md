@@ -33,6 +33,9 @@
 * Package Manager
   * NPM (Node Package Manager) - package-lock.json
   * YARN - yarn.lock
+* [Semantic versioning (semver)](https://semver.org/)
+  * `~8.2.14`
+  * `^1.10.0`
 
 * [What is Angular?](https://angular.io/guide/what-is-angular)
 * Angular applications: The essentials
@@ -57,9 +60,7 @@ Angular - What is Angular?
     * @Component
     * @Directive
     * @Injectable
-* Semantic versioning (semver) examples
-  * `~8.2.14`
-  * `^1.10.0`
+
 * Angular Template Syntax
   * `*ngFor`
   * `*ngIf`
