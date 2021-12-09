@@ -60,7 +60,6 @@ Angular - What is Angular?
     * @Component
     * @Directive
     * @Injectable
-
 * Angular Template Syntax
   * `*ngFor`
   * `*ngIf`
@@ -73,30 +72,21 @@ Angular - What is Angular?
 
 ## Day 2
 
+* Adding 3rd party dependency
+* Angular Module
+* Angular Routing Module
+* Redirecting routes
+* Nested children routes
+
 ---
 
 ## Day 3
 
-* Adding 3rd party dependency
-* Angular Module
-* Angular Routing Module
 * Nesting Components
   * Parent-child communication using @Input decorator
-
----
-
-## Day 4
-
-* Redirecting routes
-* Lazy-loaded modules
-* Nesting components
   * Child-parent communication using @Output decorator
+* Lazy-loaded modules
 * Angular Service and Dependency Injection
-
----
-
-## Day 5 | 6
-
 * HttpClientModule
 * Observable
 * Pipes (Async pipes)
