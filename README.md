@@ -82,10 +82,10 @@ Angular - What is Angular?
 
 ## Day 3
 
+* Lazy-loaded routes or modules
 * Nesting Components
   * Parent-child communication using @Input decorator
   * Child-parent communication using @Output decorator
-* Lazy-loaded modules
 * Angular Service and Dependency Injection
 * HttpClientModule
 * Observable
