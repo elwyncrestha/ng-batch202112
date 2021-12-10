@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-layout.component.scss']
 })
 export class HomeLayoutComponent implements OnInit {
+  footerContent = '2021 Angular Training - Cotiviti';
 
   constructor() { }
 
