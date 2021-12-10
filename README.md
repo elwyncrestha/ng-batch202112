@@ -86,18 +86,21 @@ Angular - What is Angular?
 * Nesting Components
   * Parent-child communication using @Input decorator
   * Child-parent communication using @Output decorator
+
+---
+
+## Day 4
+
 * Angular Service and Dependency Injection
 * HttpClientModule
 * Observable
 * Pipes (Async pipes)
 
----
-
-## Day 7
+## Day 5
 
 * Subject, Behavioral Subject, Observable and Subscription
 
-## Day 8
+## Day 6
 
 * Template-driven form: FormsModule
 * Reactive form: ReactiveFormsModule

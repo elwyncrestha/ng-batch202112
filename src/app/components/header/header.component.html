@@ -13,9 +13,9 @@
           <a class="nav-link" routerLink="/home/inventories/new" routerLinkActive="active">Add Inventory</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-success" type="button">Profile</button>
-      </form>
+      <div *ngIf="rightButtonText" class="d-flex">
+        <button (click)="handleRightBtnClick()" class="btn btn-success" type="button">{{ rightButtonText }}</button>
+      </div>
     </div>
   </div>
 </nav>

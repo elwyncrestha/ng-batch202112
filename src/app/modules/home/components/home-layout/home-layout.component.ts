@@ -13,4 +13,8 @@ export class HomeLayoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleHeaderBtnClicked(value: string): void {
+    console.log('BUTTON CLICKED!', value);
+  }
+
 }
