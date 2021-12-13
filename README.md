@@ -93,7 +93,7 @@ Angular - What is Angular?
 
 * Angular Service and Dependency Injection
 * Inbuilt Pipes
-* Observable
+* Subject, Behavioral Subject, Observable and Subscription
 * HttpClientModule
 * Async pipe
 
@@ -101,7 +101,7 @@ Angular - What is Angular?
 
 ## Day 5
 
-* Subject, Behavioral Subject, Observable and Subscription
+
 
 ## Day 6
 

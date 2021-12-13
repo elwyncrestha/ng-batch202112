@@ -1,20 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Observable, of, Subject } from 'rxjs';
 import { User } from '../models/user.model';
+import { USERS_MOCK } from './user-mock.constant';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor() {}
+  private readonly _user: Subject<User>;
+  readonly user$: Observable<User>;
+  isMale = true;
 
-  getUserDetails(): User {
-    return {
-      id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-      address: 'Nepal',
-      dob: new Date(),
-      salary: 50000
-    };
+  constructor() {
+    this._user = new Subject<User>();
+    this.user$ = this._user.asObservable();
+  }
+
+  setUserDetails() {
+    this.isMale = !this.isMale;
+    this._user.next(USERS_MOCK[this.isMale ? 0 : 1]);
   }
 }
