@@ -92,9 +92,12 @@ Angular - What is Angular?
 ## Day 4
 
 * Angular Service and Dependency Injection
-* HttpClientModule
+* Inbuilt Pipes
 * Observable
-* Pipes (Async pipes)
+* HttpClientModule
+* Async pipe
+
+---
 
 ## Day 5
 

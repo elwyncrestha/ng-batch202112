@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HomeLayoutComponent } from './components/home-layout/home-layout.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
     HomeLayoutComponent,
     HeaderComponent,
     FooterComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

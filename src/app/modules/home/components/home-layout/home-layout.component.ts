@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-layout',
@@ -8,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeLayoutComponent implements OnInit {
   footerContent = '2021 Angular Training - Cotiviti';
 
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
   }
 
   handleHeaderBtnClicked(value: string): void {
-    console.log('BUTTON CLICKED!', value);
+    this.router.navigate(['/home/profile']);
   }
 
 }
