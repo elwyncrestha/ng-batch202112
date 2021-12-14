@@ -1,5 +1,5 @@
 <ul>
-  <li>Full Name: {{ (user$ | async)?.firstName }} {{ user?.lastName }}</li>
+  <li>Full Name: {{ (user$ | async)?.firstName }} {{ (user$ | async)?.lastName }}</li>
   <li>Date of Birth: {{ (user$ | async)?.dob | date }}</li>
   <li>Salary: {{ (user$ | async)?.salary | currency }}</li>
 </ul>
