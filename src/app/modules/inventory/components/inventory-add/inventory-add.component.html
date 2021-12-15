@@ -1,1 +1,15 @@
-<p>inventory-add works!</p>
+<div class="jumbotron px-5 py-5">
+  <h1 class="display-4">Add Inventory</h1>
+  <hr class="my-4">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input formControlName="name" type="text" class="form-control" id="name" aria-describedby="nameHelp">
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantity</label>
+      <input formControlName="quantity" type="number" class="form-control" id="quantity" aria-describedby="quantityHelp">
+    </div>
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

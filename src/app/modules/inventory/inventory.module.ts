@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InventoryRoutingModule } from './inventory-routing.module';
 import { InventoryListComponent } from './components/inventory-list/inventory-list.component';
 import { InventoryAddComponent } from './components/inventory-add/inventory-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { InventoryAddComponent } from './components/inventory-add/inventory-add.
   ],
   imports: [
     CommonModule,
-    InventoryRoutingModule
+    InventoryRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class InventoryModule { }
