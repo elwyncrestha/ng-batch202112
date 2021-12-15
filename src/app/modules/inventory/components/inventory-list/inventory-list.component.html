@@ -1,1 +1,29 @@
-<p>inventory-list works!</p>
+<div class="p-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Created At</th>
+        <th scope="col">Last Modified At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="(inventories$ | async) === null || (inventories$ | async)?.length === 0; else tableData">
+        <tr>
+          <td colspan="5">No inventories</td>
+        </tr>
+      </ng-container>
+      <ng-template #tableData>
+        <tr *ngFor="let inventory of (inventories$ | async); let i = index;">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ inventory.name }}</td>
+          <td>{{ inventory.quantity }}</td>
+          <td>{{ inventory.createdAt | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ inventory.lastModifiedAt | date }}</td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+</div>

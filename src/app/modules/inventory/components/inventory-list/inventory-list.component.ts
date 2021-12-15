@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Inventory } from '../../models/inventory.model';
+import { InventoryService } from '../../services/inventory.service';
 
 @Component({
   selector: 'app-inventory-list',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory-list.component.scss']
 })
 export class InventoryListComponent implements OnInit {
+  inventories$!: Observable<Inventory[]>;
 
-  constructor() { }
+  constructor(private readonly inventoryService: InventoryService) { }
 
   ngOnInit(): void {
+    this.inventories$ = this.inventoryService.getInventories();
   }
 
 }
