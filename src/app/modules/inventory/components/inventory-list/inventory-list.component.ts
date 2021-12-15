@@ -14,7 +14,7 @@ export class InventoryListComponent implements OnInit {
   constructor(private readonly inventoryService: InventoryService) { }
 
   ngOnInit(): void {
-    this.inventories$ = this.inventoryService.getInventories();
+    this.inventories$ = this.inventoryService.getAll();
   }
 
 }

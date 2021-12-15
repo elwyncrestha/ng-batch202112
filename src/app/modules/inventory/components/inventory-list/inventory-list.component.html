@@ -10,20 +10,22 @@
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngIf="(inventories$ | async) === null || (inventories$ | async)?.length === 0; else tableData">
-        <tr>
-          <td colspan="5">No inventories</td>
-        </tr>
+      <ng-container *ngIf="(inventories$ | async) as inventories">
+        <ng-container *ngIf="inventories === null || inventories?.length === 0; else tableData">
+          <tr>
+            <td colspan="5">No inventories</td>
+          </tr>
+        </ng-container>
+        <ng-template #tableData>
+          <tr *ngFor="let inventory of inventories; let i = index;">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ inventory.name }}</td>
+            <td>{{ inventory.quantity }}</td>
+            <td>{{ inventory.createdAt | date: 'yyyy-MM-dd' }}</td>
+            <td>{{ inventory.lastModifiedAt | date }}</td>
+          </tr>
+        </ng-template>
       </ng-container>
-      <ng-template #tableData>
-        <tr *ngFor="let inventory of (inventories$ | async); let i = index;">
-          <th scope="row">{{ i + 1 }}</th>
-          <td>{{ inventory.name }}</td>
-          <td>{{ inventory.quantity }}</td>
-          <td>{{ inventory.createdAt | date: 'yyyy-MM-dd' }}</td>
-          <td>{{ inventory.lastModifiedAt | date }}</td>
-        </tr>
-      </ng-template>
     </tbody>
   </table>
 </div>

@@ -1,7 +1,24 @@
-<div class="jumbotron p-5">
+<div class="jumbotron px-5 py-3">
   <h1 class="display-4">Hello, all!</h1>
   <p class="lead">This is an Inventory management system.</p>
   <hr class="my-4">
   <p>It provides you with list of inventories.</p>
   <a class="btn btn-primary btn-lg" role="button">Learn more</a>
+</div>
+<div class="jumbotron px-5 py-1">
+  <h1 class="display-4">Suscribe to our newsletter</h1>
+  <p class="lead">Enter your email to subscribe...</p>
+  <hr class="my-4">
+  <form (ngSubmit)="submit(subscriptionForm)" #subscriptionForm="ngForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        #emailControl="ngModel"
+        ngModel
+        name="email"
+        type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <button [disabled]="subscriptionForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
