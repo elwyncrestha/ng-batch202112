@@ -20,4 +20,8 @@ export abstract class BaseService<T> {
   save(t: T): Observable<T> {
     return this.http.post<T>(this.getFullUrl(), t);
   }
+
+  delete(id: number): Observable<T> {
+    return this.http.delete<T>(`${this.getFullUrl()}/${id}`);
+  }
 }

@@ -7,14 +7,13 @@
         <th scope="col">Quantity</th>
         <th scope="col">Created At</th>
         <th scope="col">Last Modified At</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngIf="(inventories$ | async) as inventories">
+      <ng-container *ngIf="(inventories$ | async) as inventories; else noData">
         <ng-container *ngIf="inventories === null || inventories?.length === 0; else tableData">
-          <tr>
-            <td colspan="5">No inventories</td>
-          </tr>
+          <ng-container [ngTemplateOutlet]="noData"></ng-container>
         </ng-container>
         <ng-template #tableData>
           <tr *ngFor="let inventory of inventories; let i = index;">
@@ -23,9 +22,17 @@
             <td>{{ inventory.quantity }}</td>
             <td>{{ inventory.createdAt | date: 'yyyy-MM-dd' }}</td>
             <td>{{ inventory.lastModifiedAt | date }}</td>
+            <td>
+              <button (click)="deleteInventory(inventory.id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
           </tr>
         </ng-template>
       </ng-container>
+      <ng-template #noData>
+        <tr>
+          <td colspan="5">No inventories</td>
+        </tr>
+      </ng-template>
     </tbody>
   </table>
 </div>
