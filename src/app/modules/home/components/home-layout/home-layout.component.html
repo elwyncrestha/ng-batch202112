@@ -1,5 +1,8 @@
 <app-header rightButtonText="Profile" (rightBtnClicked)="handleHeaderBtnClicked($event)"></app-header>
 <router-outlet></router-outlet>
 <div class="footer p-3">
-  <app-footer [text]="footerContent"></app-footer>
+  <app-footer [text]="footerContent">
+    <span class="copyright"> | Copyright</span>
+    <span class="ignoredFooter">I am an ignored footer.</span>
+  </app-footer>
 </div>
