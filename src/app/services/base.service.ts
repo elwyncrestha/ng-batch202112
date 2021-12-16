@@ -17,6 +17,10 @@ export abstract class BaseService<T> {
     return this.http.get<T[]>(this.getFullUrl());
   }
 
+  getOne(id: number): Observable<T> {
+    return this.http.get<T>(`${this.getFullUrl()}/${id}`);
+  }
+
   save(t: T): Observable<T> {
     return this.http.post<T>(this.getFullUrl(), t);
   }

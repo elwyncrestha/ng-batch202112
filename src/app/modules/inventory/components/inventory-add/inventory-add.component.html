@@ -1,6 +1,11 @@
 <div class="jumbotron px-5 py-5">
   <h1 class="display-4">Add Inventory</h1>
   <hr class="my-4">
+  <p>
+    <ngb-alert *ngIf="showError" type="danger" [dismissible]="true">
+      <strong>Error!</strong> Inventory request failed.
+    </ngb-alert>
+  </p>
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>

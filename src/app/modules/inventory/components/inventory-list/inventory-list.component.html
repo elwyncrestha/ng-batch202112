@@ -23,6 +23,7 @@
             <td>{{ inventory.createdAt | date: 'yyyy-MM-dd' }}</td>
             <td>{{ inventory.lastModifiedAt | date }}</td>
             <td>
+              <button (click)="editInventory(inventory.id)" class="btn btn-info btn-sm mx-1">Edit</button>
               <button (click)="deleteInventory(inventory.id)" class="btn btn-danger btn-sm">Delete</button>
             </td>
           </tr>
@@ -30,7 +31,7 @@
       </ng-container>
       <ng-template #noData>
         <tr>
-          <td colspan="5">No inventories</td>
+          <td colspan="6">No inventories</td>
         </tr>
       </ng-template>
     </tbody>
