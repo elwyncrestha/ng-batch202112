@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { take } from 'rxjs';
 import { InventoryService } from '../../services/inventory.service';
 
@@ -16,8 +16,7 @@ export class InventoryAddComponent implements OnInit {
   constructor(
     private readonly inventoryService: InventoryService,
     private readonly router: Router,
-    private readonly fb: FormBuilder,
-    private readonly activatedRoute: ActivatedRoute
+    private readonly fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
@@ -34,11 +33,10 @@ export class InventoryAddComponent implements OnInit {
   }
 
   private fillFormIfRequired(): void {
-    const inventoryIdString = this.activatedRoute.snapshot.queryParamMap.get('id');
-    if (!inventoryIdString) {
+    const inventoryId = history.state.id;
+    if (!inventoryId) {
       return;
     }
-    const inventoryId = Number(inventoryIdString);
     this.inventoryService.getOne(inventoryId).pipe(take(1)).subscribe((inventory) => {
       this.form.patchValue(inventory);
     });
