@@ -16,10 +16,6 @@ const routes: Routes = [
   {
     path: 'new',
     component: InventoryAddComponent
-  },
-  {
-    path: 'new/:id',
-    component: InventoryAddComponent
   }
 ];
 

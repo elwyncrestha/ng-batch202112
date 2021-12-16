@@ -27,7 +27,7 @@ export class InventoryListComponent implements OnInit {
       return;
     }
 
-    this.router.navigate([`/home/inventories/new/${id}`]);
+    this.router.navigate(['/home/inventories/new'], { queryParams: { id } });
   }
 
   deleteInventory(id: number | undefined): void {

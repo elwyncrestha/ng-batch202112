@@ -34,7 +34,7 @@ export class InventoryAddComponent implements OnInit {
   }
 
   private fillFormIfRequired(): void {
-    const inventoryIdString = this.activatedRoute.snapshot.paramMap.get('id');
+    const inventoryIdString = this.activatedRoute.snapshot.queryParamMap.get('id');
     if (!inventoryIdString) {
       return;
     }
