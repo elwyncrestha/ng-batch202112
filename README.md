@@ -93,7 +93,7 @@ Angular - What is Angular?
 
 * Angular Service and Dependency Injection
 * Inbuilt Pipes
-* Subject, Behavioral Subject, Observable and Subscription
+* RxJS: Subject, Behavioral Subject, Observable and Subscription
 * Async pipe
 
 ---
@@ -127,4 +127,4 @@ Angular - What is Angular?
 
 ## Day 8
 
-* NgRx application
+* NgRx application | [Go through NgRx implementation from this repo](https://github.com/elwyncrestha/ng-batch202108)
